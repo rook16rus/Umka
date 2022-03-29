@@ -1,0 +1,45 @@
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  padding: 4rem 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__burger {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-right: auto;
+    margin-left: 6.4rem;
+
+    font: var(--body-S-bold);
+    color: #fff;
+
+    svg {
+      width: 2.5rem;
+      height: 1.2rem;
+    }
+  }
+
+  &__nav {
+    margin-right: 5rem;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  &__menu-item {
+    font: var(--body-S);
+    color: #fff;
+  }
+}

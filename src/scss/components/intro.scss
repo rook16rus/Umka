@@ -1,0 +1,84 @@
+.intro {
+  position: relative;
+
+  width: 100vw;
+  height: 100vh;
+  padding-top: var(--intro-padding-top);
+
+  &__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  &__title {
+    max-width: 64rem;
+    margin-bottom: 6.5rem;
+  }
+
+  &__footer {
+    display: grid;
+    grid-template-columns: minmax(25rem, 39rem) 1fr;
+    gap: 7rem;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__button-top {
+    svg {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  &__button-bottom {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 1.8rem 1fr auto;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 34rem;
+    margin: 0 auto;
+    padding: 1.1rem 1.2rem;
+
+    background-color: var(--accent-secondary);
+    border-radius: 0 0 1rem 1rem;
+
+    color: #fff;
+  }
+
+  &__button-bottom-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  &__button-bottom-text {
+    font: var(--body-S-bold);
+  }
+
+  &__button-bottom-timer {
+    font: var(--other-L);
+  }
+
+  &__button-bottom-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  &__slider {
+    max-width: 51rem;
+  }
+}
