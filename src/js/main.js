@@ -4,6 +4,7 @@ import setScrollbarWidth from './build-in/setScrollbarWidth';
 import anchorLinks from './build-in/anchorLinks';
 import intro from "./build-in/intro";
 import initSliders from "./custom/initSliders";
+import menuBurger from "../partials/components/menuBurger";
 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     detectTouch();
     setScrollbarWidth();
     anchorLinks();
+    menuBurger();
 
     initSliders();
     intro();
