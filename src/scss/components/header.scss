@@ -6,6 +6,10 @@
 
   padding: 4rem 0;
 
+  @media (max-width: 690px) {
+    padding: 1.6rem 0;
+  }
+
   &__inner {
     display: flex;
     align-items: center;
@@ -22,6 +26,21 @@
     font: var(--body-S-bold);
     color: #fff;
 
+    @media (max-width: 550px) {
+      font: var(--other-S-bold);
+      margin-left: 4rem;
+    }
+
+    @media (max-width: 490px) {
+      span {
+        display: none;
+      }
+    }
+
+    @media (max-width: 359px) {
+      margin-left: 2rem;
+    }
+
     svg {
       width: 2.5rem;
       height: 1.2rem;
@@ -30,6 +49,11 @@
 
   &__nav {
     margin-right: 5rem;
+
+
+    @media (max-width: 1145px) {
+      display: none;
+    }
   }
 
   &__menu {
@@ -41,5 +65,13 @@
   &__menu-item {
     font: var(--body-S);
     color: #fff;
+  }
+
+  &__button {
+    @media (max-width: 550px) {
+      padding: 1rem 2.5rem;
+
+      font: var(--other-S-bold);
+    }
   }
 }

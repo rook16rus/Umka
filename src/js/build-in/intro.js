@@ -1,11 +1,19 @@
 import gsap from 'gsap';
-import {Swiper, Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid} from "swiper";
+import {Swiper} from "swiper";
 
-Swiper.use([Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid]);
+const slider = new Swiper('.intro-slider', {
+    slidesPerView: 2,
+    spaceBetween: 15,
+    loop: true,
+    slideActiveClass: 'intro-slide-active',
+    breakpoints: {
+        690: {
+            spaceBetween: 40
+        }
+    }
+});
 
 export default function intro() {
-
-
     const intro = document.querySelector('.intro');
     if (!intro) return;
 
@@ -13,20 +21,34 @@ export default function intro() {
 
     const header = document.querySelector('.header');
     const headerHeight = header.clientHeight;
-    const paddingTop = headerHeight + 130 + 'px';
+    let paddingTop = 0;
 
-    intro.style.setProperty('--intro-padding-top', paddingTop);
+    if (window.screen.width < 992) {
+        paddingTop = 35;
+    } else {
+        paddingTop = 130;
+    }
+    const introPaddingTop = headerHeight + paddingTop + 'px';
+
+    intro.style.setProperty('--intro-padding-top', introPaddingTop);
 
     /* Задаю автоматическое переключение слайдера через прогрессбар */
 
-    const progress = document.querySelector('.swiper-slide-active .intro-slider__progressbar-progress');
+    /*let tl = gsap.timeline();
 
-    const tl = gsap.timeline();
+    slider.on('slideChangeTransitionStart', () => {
+        initLineAnimation(tl);
+    })
 
-    tl.to(progress, {width: '100%', duration: 3,})
+    initLineAnimation(tl);*/
+}
+/*
+
+function initLineAnimation(tl) {
+    const progress = document.querySelector('.intro-slide-active .intro-slider__progressbar-progress');
+    tl.to(progress, {width: '100%', duration: 3, onComplete: slideChange, clearProps: "all"})
 }
 
-function slideChange () {
-    const slider = new Swiper('.intro-slider');
-    slider.slideNext();
-}
+function slideChange() {
+    slider.slideNext()
+}*/

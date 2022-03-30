@@ -1,9 +1,14 @@
 .intro {
   position: relative;
 
+  display: flex;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   padding-top: var(--intro-padding-top);
+
+  @media (max-width: 1024px) {
+    min-height: 64rem;
+  }
 
   &__bg {
     position: absolute;
@@ -13,28 +18,85 @@
 
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    
+    @media (max-width: 1050px) {
+      object-position: 85% 100%;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 3rem;
   }
 
   &__title {
     max-width: 64rem;
     margin-bottom: 6.5rem;
+
+    @media (max-width: 992px) {
+      font: var(--title-M);
+      margin-bottom: auto;
+    }
+
+    @media (max-width: 400px) {
+      font: var(--title-S-narrow);
+    }
   }
 
   &__footer {
+    position: relative;
+
     display: grid;
     grid-template-columns: minmax(25rem, 39rem) 1fr;
-    gap: 7rem;
+    gap: 3.5rem 7rem;
+    
+    @media (max-width: 1290px) {
+      gap: 3rem;
+    }
+
+    @media (max-width: 980px) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
 
   &__buttons {
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 980px) {
+      max-width: 40rem;
+    }
+
+    @media (max-width: 500px) {
+      max-width: 33rem;
+    }
   }
 
   &__button-top {
     svg {
       width: 4rem;
       height: 4rem;
+    }
+
+    @media (max-width: 500px) {
+      padding: 2.2rem 2.5rem;
+
+      font: var(--other-L);
+
+      svg {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+
+    @media (max-width: 340px) {
+      padding: 1.5rem ;
+
+      font-size: 1.8rem;
     }
   }
 
@@ -54,6 +116,18 @@
     border-radius: 0 0 1rem 1rem;
 
     color: #fff;
+
+    @media (max-width: 980px) {
+      max-width: 36rem;
+    }
+
+    @media (max-width: 500px) {
+      max-width: 30rem;
+    }
+
+    @media (max-width: 340px) {
+      max-width: 90%;
+    }
   }
 
   &__button-bottom-icon {
@@ -63,6 +137,10 @@
 
   &__button-bottom-text {
     font: var(--body-S-bold);
+
+    @media (max-width: 500px) {
+      font: var(--other-S-bold);
+    }
   }
 
   &__button-bottom-timer {
@@ -80,5 +158,43 @@
 
   &__slider {
     max-width: 51rem;
+
+    @media (max-width: 980px) {
+      max-width: none;
+    }
+  }
+
+  &__ribbon {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    width: 26.4rem;
+    height: 27.3rem;
+    padding: 2.2rem 2.5rem;
+
+    background: url('../img/intro-ribbon.png') no-repeat left 0 top 0;
+    background-size: cover;
+
+    @media (max-width: 1260px) {
+      display: none;
+    }
+  }
+
+  &__ribbon-text {
+    max-width: 16rem;
+
+    font: var(--body-XX);
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  &__ribbon-icon {
+    position: absolute;
+    right: 2.5rem;
+    bottom: 3rem;
+
+    width: 9.6rem;
+    height: 10.3rem;
   }
 }

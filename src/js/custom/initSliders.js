@@ -70,6 +70,7 @@ export default function initSliders() {
         const swiper = new Swiper(slider, {
             slidesPerView,
             grid: gridColumn,
+            slidesPerGroup: 1,
             spaceBetween,
             ...navigation,
             hashNavigation,

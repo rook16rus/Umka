@@ -1,47 +1,63 @@
 {{#extend "layout"}}
-{{#content "main"}}
-    <section class="intro">
-        <img class="intro__bg" src="img/intro-bg.jpg" alt="Умка">
-        <div class="container">
-            <h1 class="intro__title main-title">Умка — Льдозаливочная машина для открытых арен </h1>
-            <div class="intro__footer">
-                <div class="intro__buttons">
-                    <button class="intro__button-top button">
-                        <span>Подберите УМКУ со скидкой 10%</span>
-                        <svg>
-                            <use xlink:href="#gear-icon"></use>
-                        </svg>
-                    </button>
-                    <button class="intro__button-bottom">
-                        <svg class="intro__button-bottom-icon">
-                            <use xlink:href="#time-icon"></use>
-                        </svg>
-                        <span class="intro__button-bottom-text">предложение ограничено</span>
-                        <span class="intro__button-bottom-timer">18:25:15</span>
-                        <svg class="intro__button-bottom-bg">
-                            <use xlink:href="#timer-bg"></use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="intro__slider intro-slider swiper-container js-init-slider" data-loop="true" data-slides="2" data-space="40">
-                    <div class="swiper-wrapper">
-                        <div class="intro-slider__slide swiper-slide">
-                            <p>Обслуживает <br>до 30 катков <br>в день</p>
-                            <div class="intro-slider__progressbar">
-                                <div class="intro-slider__progressbar-progress"></div>
+    {{#content "main"}}
+        <section class="intro">
+            <picture>
+                <source srcset="img/intro-bg-mobile.jpg" media="(max-width: 420px)">
+                <img class="intro__bg" src="img/intro-bg.jpg" alt="Умка">
+            </picture>
+            <div class="container">
+                <div class="intro__inner">
+                    <h1 class="intro__title main-title">Умка — Льдозаливочная машина для открытых арен </h1>
+                    <div class="intro__footer">
+                        <div class="intro__buttons">
+                            <button class="intro__button-top button">
+                                <span>Подберите УМКУ со скидкой 10%</span>
+                                <svg>
+                                    <use xlink:href="#gear-icon"></use>
+                                </svg>
+                            </button>
+                            <button class="intro__button-bottom">
+                                <svg class="intro__button-bottom-icon">
+                                    <use xlink:href="#time-icon"></use>
+                                </svg>
+                                <span class="intro__button-bottom-text">предложение ограничено</span>
+                                <span class="intro__button-bottom-timer">18:25:15</span>
+                                <svg class="intro__button-bottom-bg">
+                                    <use xlink:href="#timer-bg"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="intro__slider intro-slider swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="intro-slider__slide swiper-slide">
+                                    <p>Обслуживает до 30 катков в день</p>
+                                    <div class="intro-slider__progressbar">
+                                        <div class="intro-slider__progressbar-progress"></div>
+                                    </div>
+                                </div>
+                                <div class="intro-slider__slide swiper-slide">
+                                    <p>Для заливки и чистки льда на открытых катках</p>
+                                    <div class="intro-slider__progressbar">
+                                        <div class="intro-slider__progressbar-progress"></div>
+                                    </div>
+                                </div>
+                                <div class="intro-slider__slide swiper-slide">
+                                    <p>Для заливки и чистки льда на открытых катках</p>
+                                    <div class="intro-slider__progressbar">
+                                        <div class="intro-slider__progressbar-progress"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="intro-slider__slide swiper-slide">
-                            <p>Для заливки и чистки льда <br>на открытых катках</p>
-                            <div class="intro-slider__progressbar">
-                                <div class="intro-slider__progressbar-progress"></div>
-                            </div>
+                        <div class="intro__ribbon">
+                            <p class="intro__ribbon-text">Лучшая альтернатива зарубежным аналогам</p>
+                            <svg class="intro__ribbon-icon">
+                                <use xlink:href="#rus-flag"></use>
+                            </svg>
                         </div>
                     </div>
                 </div>
-
             </div>
-        </div>
-    </section>
-{{/content}}
+        </section>
+    {{/content}}
 {{/extend}}
