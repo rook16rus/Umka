@@ -20,6 +20,10 @@ html {
     -webkit-text-size-adjust: 100%;
 
     @include noHighlight();
+
+    @media (max-width: 299px) {
+        font-size: 9px;
+    }
 }
 
 body {
