@@ -11,6 +11,10 @@
   }
 
   &__item-wrapper {
+    &:not(:first-child) {
+      position: absolute;
+    }
+
     @media (max-width: 570px) {
 
       &:not(:first-child) {
@@ -20,6 +24,11 @@
         }
       }
     }
+  }
+
+  &__list {
+    position: relative;
+    overflow: hidden;
   }
 
   &__item {
