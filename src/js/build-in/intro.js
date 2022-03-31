@@ -5,7 +5,6 @@ const slider = new Swiper('.intro-slider', {
     slidesPerView: 2,
     spaceBetween: 15,
     loop: true,
-    slideActiveClass: 'intro-slide-active',
     breakpoints: {
         690: {
             spaceBetween: 40
@@ -34,21 +33,18 @@ export default function intro() {
 
     /* Задаю автоматическое переключение слайдера через прогрессбар */
 
-    /*let tl = gsap.timeline();
+    let tl = gsap.timeline();
 
     slider.on('slideChangeTransitionStart', () => {
         initLineAnimation(tl);
     })
 
-    initLineAnimation(tl);*/
+    initLineAnimation(tl);
 }
-/*
 
 function initLineAnimation(tl) {
-    const progress = document.querySelector('.intro-slide-active .intro-slider__progressbar-progress');
-    tl.to(progress, {width: '100%', duration: 3, onComplete: slideChange, clearProps: "all"})
+    tl.restart();
+    tl.clear();
+    const progress = document.querySelector('.swiper-slide-active .intro-slider__progressbar-progress');
+    tl.to(progress, {width: '100%', duration: 6, onComplete: () => slider.slideNext(), clearProps: "all"})
 }
-
-function slideChange() {
-    slider.slideNext()
-}*/

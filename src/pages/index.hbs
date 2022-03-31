@@ -59,5 +59,83 @@
                 </div>
             </div>
         </section>
+        <section class="features">
+            <div class="container">
+                <div class="features__inner">
+                    <ul class="features__list">
+                        <li>
+                            <div class="features__item">
+                                <div class="features__item-img">
+                                    <img src="img/feature-1.png" alt="Фото преимущества">
+                                </div>
+                                <div class="features__item-content">
+                                    <h3 class="features__item-title">
+                                        <span>Умка решает любые поставленные задачи</span> от заливки льда, до мойки дорог
+                                        и чистки снега
+                                    </h3>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="features__item">
+                                <div class="features__item-img">
+                                    <img src="img/feature-2.png" alt="Фото преимущества">
+                                </div>
+                                <div class="features__item-content">
+                                    <div class="features__item-text">
+                                        <h3 class="features__item-title">
+                                            Вместительнее аналогов на
+                                        </h3>
+                                        <ul class="features__item-stats">
+                                            {{#each featureStats }}
+                                                <li>
+                                                    <div class="features__item-stat">
+                                                        <span class="features__item-stat-number">{{this.number}}</span>
+                                                        <p class="features__item-stat-text">{{this.text}}</p>
+                                                    </div>
+                                                </li>
+                                            {{/each}}
+                                        </ul>
+                                    </div>
+                                    <div class="features__item-number">
+                                        <span>40%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="features__item">
+                                <div class="features__item-img">
+                                    <img src="img/feature-3.png" alt="Фото преимущества">
+                                </div>
+                                <div class="features__item-content">
+                                    <div class="features__item-text">
+                                        <h3 class="features__item-title">
+                                            Выгоднее аналогов на
+                                        </h3>
+                                        <div class="features__item-benefit">
+                                            <div class="features__item-benefit-img">
+                                                <svg>
+                                                    <use xlink:href="#bank-icon"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="features__item-benefit-text">
+                                                <p>
+                                                    616-е постановление правительства дает преференции 15% в цене
+                                                    при участии в аукционах
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="features__item-number">
+                                        <span>15%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     {{/content}}
 {{/extend}}
