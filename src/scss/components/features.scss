@@ -11,14 +11,18 @@
   }
 
   &__item-wrapper {
+    width: 100%;
+
+    background-color: #fff;
+
     &:not(:first-child) {
       position: absolute;
+      opacity: 0;
+      overflow: hidden;
     }
 
     @media (max-width: 570px) {
-
       &:not(:first-child) {
-
         .features__item-title {
           max-width: 18rem;
         }
@@ -28,7 +32,6 @@
 
   &__list {
     position: relative;
-    overflow: hidden;
   }
 
   &__item {
