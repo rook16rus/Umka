@@ -6,7 +6,7 @@ import intro from "./build-in/intro";
 import initSliders from "./custom/initSliders";
 import menuBurger from "../partials/components/menuBurger";
 import sectionScrolling from "./build-in/sectionScrolling";
-import featuresScrolling from "./build-in/featuresScrolling";
+import statsScrolling from "./build-in/statsScrolling";
 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
     setScrollbarWidth();
     anchorLinks();
     menuBurger();
-    sectionScrolling();
-    featuresScrolling();
+    //sectionScrolling();
+    statsScrolling();
 
     initSliders();
     intro();
