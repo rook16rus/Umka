@@ -2,12 +2,19 @@
   position: relative;
 
   display: flex;
+  align-items: flex-end;
   width: 100vw;
   min-height: 100vh;
   padding-top: var(--intro-padding-top);
+  padding-bottom: 10rem;
+
+  @media (max-width: 992px) {
+    align-items: stretch;
+  }
 
   @media (max-width: 1024px) {
     min-height: 64rem;
+    padding-bottom: 3rem;
   }
 
   &__bg {

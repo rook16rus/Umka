@@ -19,7 +19,7 @@ export default function statsScrolling() {
         animation: tl,
         trigger: statsSection,
         start: '40% 40%',
-        end: () => statsSection.offsetWidth * 2,
+        end: () => statsSection.offsetWidth * 3,
         scrub: true,
         pin: true
     })

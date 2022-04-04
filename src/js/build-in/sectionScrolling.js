@@ -1,5 +1,5 @@
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import {gsap} from 'gsap';
+import {ScrollTrigger} from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,8 +15,8 @@ export default function sectionScrolling() {
         disable() {
             if (scrolling.enabled) {
                 scrolling.enabled = false;
-                window.addEventListener('scroll', gsap.ticker.tick, { passive: true });
-                scrolling.events.forEach((e, i) => (i ? document : window).addEventListener(e, scrolling.prevent, { passive: false }));
+                window.addEventListener('scroll', gsap.ticker.tick, {passive: true});
+                scrolling.events.forEach((e, i) => (i ? document : window).addEventListener(e, scrolling.prevent, {passive: false}));
             }
         },
         enable() {
@@ -35,6 +35,7 @@ export default function sectionScrolling() {
             trigger: section,
             start: 'top bottom-=1',
             end: 'bottom top+=1',
+            markers: true,
             onEnter: () => goToSection(section),
             onEnterBack: () => goToSection(section)
         });
@@ -45,7 +46,7 @@ export default function sectionScrolling() {
             // skip if a scroll tween is in progress
             scrolling.disable();
             gsap.to(window, {
-                scrollTo: { y: section, autoKill: false },
+                scrollTo: {y: section, autoKill: false},
                 onComplete: scrolling.enable,
                 duration: 1
             });

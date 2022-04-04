@@ -20,14 +20,8 @@ export default function intro() {
 
     const header = document.querySelector('.header');
     const headerHeight = header.clientHeight;
-    let paddingTop = 0;
 
-    if (window.screen.width < 992) {
-        paddingTop = 35;
-    } else {
-        paddingTop = 130;
-    }
-    const introPaddingTop = headerHeight + paddingTop + 'px';
+    const introPaddingTop = headerHeight + 30 + 'px';
 
     intro.style.setProperty('--intro-padding-top', introPaddingTop);
 
