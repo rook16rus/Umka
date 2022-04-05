@@ -4,23 +4,57 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function statsScrolling() {
-    const statsSection = document.querySelector('.stats__inner');
-    const statFirst = document.querySelector('.stats__item-wrapper:nth-child(1)')
-    const statSecond = document.querySelector('.stats__item-wrapper:nth-child(2)');
-    const statThird = document.querySelector('.stats__item-wrapper:nth-child(3)');
+    const statsList = document.querySelector('.stats__img-wrapper');
+    const statFirst = document.querySelector('.stats-img-1');
+    const statSecond = document.querySelector('.stats-img-2');
+    const statThird = document.querySelector('.stats-img-3');
 
-    const tl = gsap.timeline();
-    tl.to(statFirst,{opacity:0, duration: 0.3});
-    tl.to(statSecond, {top: '50%', y: '-50%', opacity: 1}, '-=0.3');
-    tl.to(statSecond,{opacity:0, duration: 0.3});
-    tl.to(statThird, {top: '50%', y: '-50%', opacity: 1}, '-=0.3');
+    let tl = gsap.timeline();
+    tl.to(statFirst,{opacity:0, delay: 0.1, duration: 0.1});
+    tl.to(statSecond, {opacity: 1, duration: 0.1}, '-=0.1');
+    tl.to(statSecond,{opacity:0, delay: 0.1, duration: 0.1});
+    tl.to(statThird, {opacity: 1, duration: 0.1}, '-=0.1');
 
-    ScrollTrigger.create({
-        animation: tl,
-        trigger: statsSection,
-        start: '40% 40%',
-        end: () => statsSection.offsetWidth * 3,
-        scrub: true,
-        pin: true
+    let tlMobile = gsap.timeline();
+
+    tlMobile.to(statFirst,{duration: 0.1});
+    tlMobile.to(statFirst, {opacity: 0, duration: 0.1})
+    tlMobile.to(statSecond, {opacity: 1, duration: 0.1}, '-=0.1');
+    tlMobile.to(statSecond,{opacity:0, delay: 0.1, duration: 0.1});
+    tlMobile.to(statThird, {opacity: 1, duration: 0.1}, '-=0.1');
+
+    ScrollTrigger.matchMedia({
+        "(min-width: 1081px)": function () {
+            ScrollTrigger.create({
+                animation: tl,
+                trigger: statsList,
+                start: '20% center',
+                end: '85% 40%',
+                scrub: true,
+                pin: true,
+            })
+        },
+        "(max-width: 1080px)": function () {
+            ScrollTrigger.create({
+                animation: tl,
+                trigger: statsList,
+                start: '20% center',
+                end: '75% 40%',
+                scrub: true,
+                pin: true,
+            })
+        },
+        "(max-width: 960px)": function () {
+            tl.kill();
+
+            ScrollTrigger.create({
+                animation: tlMobile,
+                trigger: statsList,
+                start: 'top center',
+                end: '60% 50%',
+                scrub: true,
+                pin: true
+            })
+        }
     })
 }
