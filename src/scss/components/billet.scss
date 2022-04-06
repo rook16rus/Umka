@@ -9,6 +9,21 @@
   border-radius: 99.9rem;
   overflow: hidden;
 
+  @media (max-width: 770px) {
+    padding: 3rem;
+    max-width: 29rem;
+
+    .play-button {
+      width: 7.5rem;
+      height: 7.5rem;
+
+      svg {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+  }
+
   &__bg {
     position: absolute;
     left: 0;
