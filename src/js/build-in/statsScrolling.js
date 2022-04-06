@@ -66,7 +66,6 @@ export default function statsScrolling() {
         let height = 0;
 
         images.forEach(img => {
-            console.log(img.clientHeight)
             if (img.clientHeight >= height) height = img.clientHeight;
         })
 

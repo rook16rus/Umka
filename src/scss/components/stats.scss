@@ -3,13 +3,16 @@
   width: 100vw;
   min-height: 100vh;
   padding-top: 16rem;
+  padding-bottom: 16rem;
 
   @media (max-width: 1245px) {
     padding-top: 9rem;
+    padding-bottom: 9rem;
   }
   
   @media (max-width: 960px) {
     padding-top: 30rem;
+    padding-bottom: 6.5rem;
   }
 
   @media (max-width: 360px) {
@@ -63,7 +66,7 @@
     width: 28.78%;
     height: 100%;
     
-    @media (max-width: 1365px) {
+    @media (max-width: 1240px) {
       width: 23.14%;
     }
 

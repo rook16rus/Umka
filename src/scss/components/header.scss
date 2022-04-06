@@ -7,6 +7,16 @@
 
   padding: 4rem 0;
 
+  transition: 0.3s;
+
+  @media (max-width: 1260px) {
+    padding: 2.5rem 0;
+  }
+
+  @media (max-width: 1145px) {
+    padding: 2rem 0;
+  }
+
   @media (max-width: 690px) {
     padding: 1.6rem 0;
   }
@@ -19,6 +29,7 @@
 
   &__logo {
     z-index: 150;
+    color: #fff;
   }
 
   &__burger {
@@ -30,6 +41,8 @@
 
     font: var(--body-S-bold);
     color: #fff;
+
+    transition: 0.3s;
 
     @media (max-width: 550px) {
       font: var(--other-S-bold);
@@ -70,6 +83,12 @@
   &__menu-item {
     font: var(--body-S);
     color: #fff;
+
+    transition: 0.3s;
+    
+    &:hover {
+      color: var(--accent-primary);
+    }
   }
 
   &__button {
@@ -77,6 +96,30 @@
       padding: 1rem 2.5rem;
 
       font: var(--other-S-bold);
+    }
+  }
+
+  &--white {
+    background-color: #fff;
+
+    .header__logo {
+      color: var(--accent-primary);
+    }
+
+    .header__burger {
+      color: var(--main-primary);
+    }
+
+    .header__menu-item {
+      color: var(--main-primary);
+
+      &:hover {
+        color: var(--accent-primary);
+      }
+    }
+
+    .header__button {
+      background-color: var(--accent-primary);
     }
   }
 }
