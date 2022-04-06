@@ -40,6 +40,11 @@ main {
     display: block;
 }
 
+video, iframe {
+    max-width: 100%;
+    display: block;
+}
+
 ul,
 ol {
     list-style: none;

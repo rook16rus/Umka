@@ -5,6 +5,9 @@
 @import './global/global';
 @import './global/layout';
 
+@import "./components/billet";
+@import "./components/play-button";
+
 @import './components/header';
 @import './components/footer';
 @import './components/modal';
@@ -15,3 +18,4 @@
 @import "./components/socials";
 @import "./components/stats";
 @import "./components/features";
+@import "./components/overview";

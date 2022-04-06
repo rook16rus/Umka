@@ -12,6 +12,5 @@ export default function headerScrolling() {
         end: 'bottom bottom',
         onEnter: () => header.classList.add('header--white'),
         onEnterBack: () => header.classList.remove('header--white'),
-        markers: true
     })
 }

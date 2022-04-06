@@ -1,0 +1,43 @@
+.overview {
+  position: relative;
+
+  &__video {
+    width: 100%;
+    aspect-ratio: 1550 / 500;
+
+    border-radius: 1rem;
+    object-fit: cover;
+    filter: blur(6px);
+  }
+
+  &__video-billet {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+    max-width: 38rem;
+  }
+
+  &__video-description {
+    position: absolute;
+    left: calc(100% + 8rem);
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: block;
+    max-width: 34.6rem;
+
+    font: var(--title-L);
+    color: #fff;
+
+    sup {
+      position: absolute;
+      top: 8.8rem;
+      right: 0;
+
+      font: var(--body-XL);
+    }
+  }
+}
