@@ -2,6 +2,11 @@
   display: flex;
   width: 100vw;
   min-height: 100vh;
+  padding-bottom: 8rem;
+
+  @media (max-width: 580px) {
+    padding-bottom: 6.5rem;
+  }
 
   &__wrapper {
     display: grid;
