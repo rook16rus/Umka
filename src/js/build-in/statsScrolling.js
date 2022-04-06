@@ -17,7 +17,7 @@ export default function statsScrolling() {
 
     let tlMobile = gsap.timeline();
 
-    tlMobile.to(statFirst,{duration: 0.1});
+    tlMobile.to(statFirst,{duration: 0.11});
     tlMobile.to(statFirst, {opacity: 0, duration: 0.1})
     tlMobile.to(statSecond, {opacity: 1, duration: 0.1}, '-=0.1');
     tlMobile.to(statSecond,{opacity:0, delay: 0.1, duration: 0.1});
@@ -57,4 +57,19 @@ export default function statsScrolling() {
             })
         }
     })
+
+    /* Задаю высоты общего блока с фотографий с белым фоном */
+
+    if (window.innerWidth <= 960 ) {
+        const imgBlock = document.querySelector('.stats__img-block');
+        const images = document.querySelectorAll('.stats__img');
+        let height = 0;
+
+        images.forEach(img => {
+            console.log(img.clientHeight)
+            if (img.clientHeight >= height) height = img.clientHeight;
+        })
+
+        imgBlock.style.height = height + 'px';
+    }
 }
